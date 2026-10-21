@@ -1,9 +1,15 @@
 <!DOCTYPE html>
+<!--
+  Kosmos 3D – interactive journey from Earth to the multiverse
+  Copyright (c) 2026 Nick Aldinger. All rights reserved.
+  No part of this code may be copied, modified or redistributed without written permission.
+-->
 <html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Sonnensystem – interaktiv in 3D</title>
+<meta name="author" content="Nick Aldinger">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -93,6 +99,7 @@ body{
 .ladder button:hover::before{border-color:#fff}
 .ladder button[aria-current="true"]::before{background:#f2b44c;border-color:#f2b44c;transform:scale(1.3)}
 .ladder button:focus-visible{outline:1.5px solid #f2b44c;outline-offset:1px}
+.masthead .credit{margin-top:.35rem;font-size:.7rem;color:rgba(225,231,250,.3)}
 .masthead .hint{margin-top:.5rem;max-width:44ch;font-size:.8rem;color:rgba(225,231,250,.4);transition:color .4s ease,opacity .28s ease,transform .28s ease}
 .masthead .hint.near{color:#f3c983}
 .masthead .mode-note[hidden]{display:none}
@@ -216,7 +223,7 @@ body.touring .controls{display:none}
 .tour-sound:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 body.touring .tour-sound{display:grid;place-items:center}
 body.touring .tour-end{display:inline-flex}
-body.touring #labels,body.touring .card,body.touring .scale-row,body.touring #lvDesc,body.touring #lvHint,body.touring .mode-note{display:none!important}
+body.touring #labels,body.touring .card,body.touring .scale-row,body.touring #lvDesc,body.touring #lvHint,body.touring .masthead .credit,body.touring .mode-note{display:none!important}
 
 /* Loader */
 #loader{
@@ -271,6 +278,7 @@ body.touring #labels,body.touring .card,body.touring .scale-row,body.touring #lv
     <nav class="ladder" id="ladder" aria-label="Größenordnung wählen"></nav>
   </div>
   <p class="hint swap" id="lvHint">Weiter herauszoomen: Sonnenumgebung</p>
+  <p class="credit">© 2026 Nick Aldinger</p>
   <p class="mode-note" id="modeNote" hidden>Echte Größen: Sonne und Planeten im richtigen Verhältnis. Nur die Abstände sind verkürzt, sonst wären die Planeten winzige Punkte in riesiger Leere.</p>
 </header>
 
